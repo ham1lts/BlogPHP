@@ -4,7 +4,7 @@ class Admin extends Controller
 {
     public function index()
     {
-        echo 'oi';
+        echo 'Em Breve Tela de Login Administrativo';
     }
 
 }
