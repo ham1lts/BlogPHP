@@ -31,4 +31,14 @@ class Session
             return false;
         }
     }
+
+    public static function beLoggedInAdmin()
+    {
+        if (isset($_SESSION['user_id'])) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
