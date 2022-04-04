@@ -2,19 +2,17 @@
 
 class Pages extends Controller
 {
+    public function __construct()
+    {
+        $this->postModel = $this->model('Post');
+        $this->customerModel = $this->model('Customer');
+    }
 
     public function index()
     {
-        if (Session::beLoggedIn()) {
-            URL::redirect('posts');
-        } else {
-            $data = [
-                'tituloPagina'    => 'Página Inicial.',
-                'descricao' => 'Blog Bis2Bis'
-            ];
 
-            $this->view('pages/home', $data);
-        }
+        $data = $this->postModel->myPosts();
+        $this->view('posts/index', $data);
     }
 
     public function about()
