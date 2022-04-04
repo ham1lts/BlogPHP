@@ -5,18 +5,13 @@ class Posts extends Controller
 
     public function __construct()
     {
-        if (!Session::beLoggedIn()) {
-            URL::redirect('user/login');
-        }
         $this->postModel = $this->model('Post');
         $this->customerModel = $this->model('Customer');
     }
 
     public function index()
     {
-
-        $data = $this->postModel->myPosts();
-        $this->view('posts/index', $data);
+        Url::redirect('./');
     }
 
     public function registerPost()

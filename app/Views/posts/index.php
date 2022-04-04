@@ -3,9 +3,11 @@
     <div class="card bg-light">
         <div class="card-header bg-info text-white">
             POSTAGENS
+            <?php if(isset($_SESSION['user_id'])){?>
             <div class="float-right">
                 <a href="<?= URL ?>/posts/registerpost" class="btn btn-light">Escrever</a>
             </div>
+            <?php }; ?>
         </div>
         <div class="card-body">
             <?php foreach ($data as $post) : ?>

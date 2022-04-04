@@ -19,7 +19,7 @@
                     Escrito por: <b><?= $data['user']->name ?></b> em <i><?= date('d-m-y H:i',strtotime($data['post']->created_at)) ?></i>
                 </small>
             </div>
-            <?php if ($data['post']->user_id == $_SESSION['user_id']){ ?>
+            <?php if ($data['post']->user_id == isset($_SESSION['user_id'])){ ?>
                 <ul class="list-inline">
                     <li class="list-inline-item">
                         <a href="<?= URL . '/posts/edit/' . $data['post']->id ?>" class="btn btn-sm btn-primary">Editar</a>
