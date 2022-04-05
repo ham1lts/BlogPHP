@@ -9,7 +9,7 @@
             <form name="login" method="POST" action="<?= URL ?>/admin/login" class="mt-4">
                 <div class="form-group">
                     <label for="email">Usuário ou Email: <sup class="text-danger">*</sup></label>
-                    <input type="email" name="email" id="email" class="form-control <?= $data['email_erro'] ? 'is-invalid' : '' ?>">
+                    <input type="text" name="email" id="email" class="form-control <?= $data['email_erro'] ? 'is-invalid' : '' ?>">
                     <div class="invalid-feedback">
                         <?= $data['email_erro'] ?>
                     </div>

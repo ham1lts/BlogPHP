@@ -37,7 +37,7 @@ class USerAdmin
 
     public function login($login, $senha)
     {
-        $this->db->query("SELECT * FROM admin WHERE email = :login OR user_name = :login");
+        $this->db->query("SELECT * FROM admin_user INNER JOIN authorization_role ON admin_user.authorization_role = authorization_role.rule_id WHERE email = :login OR user_name = :login");
         $this->db->bind("login", $login);
 
         if ($result = $this->db->result()) {
