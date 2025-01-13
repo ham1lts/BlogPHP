@@ -2,9 +2,9 @@
 
 class Db{
     
-    private $host       = 'localhost';
+    private $host       = 'db';
     private $user       = 'root';
-    private $password   = '';
+    private $password   = 'root';
     private $db         = 'blog_bis2bis';
     private $dbh;
     private $stmt;

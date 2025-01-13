@@ -19,7 +19,7 @@ class Pages extends Controller
     {
         $data = [
             'tituloPagina'    => 'Página Sobre nós.',
-            'descricao' => 'Blog Bis2Bis'
+            'descricao' => 'Blog'
         ];
 
         $this->view('pages/about', $data);

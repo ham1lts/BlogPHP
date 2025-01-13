@@ -16,7 +16,7 @@ class Admin extends Controller
         } else {
             $data = [
                 'tituloPagina'    => 'Página Inicial.',
-                'descricao' => 'Blog Bis2Bis'
+                'descricao' => 'Blog'
             ];
 
             $this->view('admin/login', $data);
