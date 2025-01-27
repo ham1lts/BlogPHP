@@ -1,32 +1,3 @@
--- phpMyAdmin SQL Dump
--- version 5.1.3
--- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Tempo de geração: 04-Abr-2022 às 23:38
--- Versão do servidor: 10.4.22-MariaDB
--- versão do PHP: 7.4.28
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
-
---
--- Banco de dados: `blog_bis2bis`
---
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `admin_user`
---
-
 CREATE TABLE `admin_user` (
   `id` int(11) NOT NULL,
   `user_name` varchar(255) NOT NULL,
@@ -37,21 +8,11 @@ CREATE TABLE `admin_user` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
---
--- Extraindo dados da tabela `admin_user`
---
-
 INSERT INTO `admin_user` (`id`, `user_name`, `name`, `email`, `is_active`, `password`, `created_at`) VALUES
 (1, 'hamiltonf', 'hamilton freire', 'milton.fan2323@hotmail.com232', 0, '$2y$10$W.Tq55yziOqdP43O4N7TieFIwNYE81UJnm8gytIdVnQS38Ad83Ary', '2022-03-31 17:38:46'),
 (2, 'hamilton', 'Hamilton Freire', 'milton.fan@hotmail.com', 0, '$2y$10$9b7TXE/ipZUJp8KC2Vk7yu0wF3T6BHOv2sMkUtb4AD02zQmHkoFHq', '2022-03-31 17:47:35'),
 (3, 'hamiltonf', 'Hamilton freire de andrade neto', 'milton.fan@hotmail.com4234234', 0, '$2y$10$f3d9tzFp1ToVb4wpcHl1KeaaS20nA2SzmsjslVeuCUXTJhLeGA652', '2022-03-31 17:50:19'),
 (4, 'hamiltonf123', 'Hamilton freire de andrade neto', 'milton.fan@hotmail.com12345124124', 0, '$2y$10$DzM15RtJXEKR.iHSdjcHmOiimlZMR0igBkQ6ky9kEEuxu6qztOUMu', '2022-03-31 18:05:09');
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `posts`
---
 
 CREATE TABLE `posts` (
   `id` int(11) NOT NULL,
@@ -61,13 +22,6 @@ CREATE TABLE `posts` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
-
--- --------------------------------------------------------
-
---
--- Estrutura da tabela `users`
---
-
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -75,10 +29,6 @@ CREATE TABLE `users` (
   `password` varchar(255) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Extraindo dados da tabela `users`
---
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
 (1, 'Hamilton freire de andrade neto', 'milton.fan@hotmail.com', '$2y$10$q3CpDH2LkrbZif/OYjZ5Y..FlBOyePHW9edlWCtRkaAjdWGwFBS76', '2022-03-27 00:40:43'),
@@ -99,51 +49,21 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `created_at`) VALUES
 (19, 'Hamilton freire de andrade neto', 'milton.fan9@hotmail.com', '$2y$10$uBLDi54yoRkFUoN7hfWcLOsBteEbCaKkeX3WaYAnZ.GMITrR3Yi0C', '2022-03-27 15:01:46'),
 (20, 'Hamilton freire de andrade neto', 'milton.fan10@hotmail.com', '$2y$10$A.tJAzc9782eXrV0iSbr4eOtumvoRulTf14UxosoUFbuectUTUXCO', '2022-03-27 15:06:06');
 
---
--- Índices para tabelas despejadas
---
-
---
--- Índices para tabela `admin_user`
---
 ALTER TABLE `admin_user`
   ADD PRIMARY KEY (`id`);
 
---
--- Índices para tabela `posts`
---
 ALTER TABLE `posts`
   ADD PRIMARY KEY (`id`);
 
---
--- Índices para tabela `users`
---
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
---
--- AUTO_INCREMENT de tabelas despejadas
---
-
---
--- AUTO_INCREMENT de tabela `admin_user`
---
 ALTER TABLE `admin_user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
---
--- AUTO_INCREMENT de tabela `posts`
---
 ALTER TABLE `posts`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
---
--- AUTO_INCREMENT de tabela `users`
---
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 COMMIT;
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

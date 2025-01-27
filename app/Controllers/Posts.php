@@ -109,16 +109,16 @@ class Posts extends Controller
             if ($id && $method == 'POST') :
                 if ($this->postModel->deletePost($id)) :
                     Session::alert('post', 'Post deletado com sucesso!');
-                    URL::redirect('posts');
+                    Url::redirect('posts');
                 endif;
             else :
                 Session::alert('post', 'Você não tem autorização para deletar esse Post', 'alert alert-danger');
-                URL::redirect('posts');
+                Url::redirect('posts');
             endif;
 
         else :
             Session::alert('post', 'Você não tem autorização para deletar esse Post', 'alert alert-danger');
-            URL::redirect('posts');
+            Url::redirect('posts');
         endif;
     }
 
